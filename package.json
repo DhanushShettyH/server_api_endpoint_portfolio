@@ -6,14 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "both": "concurrently \"yarn dev\" \"cd sanity && npm run dev\""
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "@portabletext/react": "^3.0.9",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.17.0",
     "framer-motion": "^10.16.4",
     "next": "latest",
+    "next-sanity": "^5.5.5",
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "^7.47.0",

@@ -6,7 +6,7 @@ import { NextResponse } from "next/server";
 const query = groq`
 *[_type == "project"]{
   ...,
-  "technologies": technologies[] 
+  technologies[]->
 }
 `;
 

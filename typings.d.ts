@@ -1,4 +1,7 @@
 // type defination file
+//Interfaces are often used to define the structure of data objects, such as API responses, form input data, or any other data that your application deals with
+//for type safety, form validation
+//When working with APIs in Next.js, you often receive JSON data from the server. You can create interfaces to describe the structure of the expected API responses, 
 interface SanityBody {
   _createdAt: string;
   _rev: string;
@@ -20,6 +23,8 @@ export interface PageInfo extends SanityBody{
     backgroundInformation:string;
     email:string;
     role:string;
+    heroImage:Image;
+    name:string;
     phoneNumber:string;
     profilePic:Image;
 }

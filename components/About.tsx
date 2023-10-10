@@ -1,10 +1,14 @@
 'use client';
 import React from 'react'
 import { motion } from "framer-motion"
+import { PageInfo } from '../typings';
+import { urlFor } from '@/sanityclient';
 
-type Props = {}
+type Props = {
+    pageInfo:PageInfo
+}
 
-export default function About({ }: Props) {
+export default function About({ pageInfo }: Props) {
     return (
         // here in desktop display col and in mobile display rows
         <motion.div
@@ -32,7 +36,7 @@ export default function About({ }: Props) {
                 viewport={{ once: true }}
 
                 className=' mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[350px] xl:h-[450px]'
-                src='/dhanush_pic.jpg'
+                src={urlFor(pageInfo?.profilePic).url()}
             />
 
             <div className='space-y-10 px-0 md:px-10'>
@@ -40,9 +44,7 @@ export default function About({ }: Props) {
                     Here is a <span className='underline decoration-[#F7ABBA]/50'>little</span> background
                 </h4>
                 <p className='text-base '>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eaque quod. Ex accusamus aut dolor porro, laboriosam nisi earum recusandae maxime, eum dolorem totam eveniet! Cupiditate quod voluptatum voluptas assumenda!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eaque quod. Ex accusamus aut dolor porro, laboriosam nisi earum recusandae maxime, eum dolorem totam eveniet! Cupiditate quod voluptatum voluptas assumenda!
-
+                   {pageInfo.backgroundInformation}
                 </p>
             </div>
 

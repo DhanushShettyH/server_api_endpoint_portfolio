@@ -1,5 +1,5 @@
 import {createClient} from "next-sanity"
-import imageUrlBuilder from "@sanity/image-url"
+import createImageUrlBuilder from "@sanity/image-url"
 
 export const config = {
     dataset: "production",
@@ -11,5 +11,4 @@ export const config = {
 // set up client for fetching data in getprops page functions
 export const sanityClient = createClient(config);
 
-const builder = imageUrlBuilder(sanityClient);
-export const urlFor = (source:any) => builder.image(source)
+export const urlFor = (source: any)=> createImageUrlBuilder(sanityClient).image(source)

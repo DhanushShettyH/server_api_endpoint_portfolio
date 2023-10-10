@@ -4,15 +4,15 @@ import { PageInfo } from '../../../typings';
 import { NextResponse } from "next/server";
 
 const query = groq`
-*[_type == "pageIngo"][0]
+*[_type == "pageInfo"][0]
 `;
 
 type Data = {
-  pageIngo: PageInfo;
+  pageInfo: PageInfo;
 };
 export async function GET({ }: Data) {
-  const pageIngo: PageInfo = await sanityClient.fetch(query);
+  const pageInfo: PageInfo = await sanityClient.fetch(query);
 
-  return NextResponse.json({ pageIngo });
+  return NextResponse.json({ pageInfo });
 }
 

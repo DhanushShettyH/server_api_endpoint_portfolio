@@ -22,9 +22,10 @@ export default {
       name: 'image',
       title: 'Image',
       type: 'image',
-      option: {
-        hotspot: true,
-      }
+      options:{
+        // if we wan't to edit of crop image directly in to database
+        hotspot:true
+    }
     },
 
 

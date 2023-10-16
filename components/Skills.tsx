@@ -23,7 +23,7 @@ export default function Skills({ skills }: Props) {
       </h3>
 
 
-      <div className='grid grid-cols-4 gap-5 xl:grid-cols-5 h-80 px-1 '>
+      <div className='grid grid-cols-4 gap-3 md:gap-5 xl:grid-cols-5 h-80 p-5 md:p-1'>
         {
           skills.slice(0, skills.length/2).map((skill) => (
             <Skill_1 key={skill._id} skill={skill}/>

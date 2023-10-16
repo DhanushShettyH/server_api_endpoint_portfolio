@@ -22,7 +22,7 @@ export default function Projects({ projects }: Props) {
                 {/* Projects */}
                 {projects.map((project, i) => (
                     <div
-                        className="w-screen relative h-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-evenly mx-auto my-auto p-20 md:p-44"
+                        className="w-screen relative h-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-evenly mx-auto p-20 md:p-44"
                         key={project._id}
                     >
                         <motion.img
@@ -31,22 +31,22 @@ export default function Projects({ projects }: Props) {
                             transition={{ duration: 1.5 }}
                             viewport={{ once: true }}
                             src={urlFor(project.image).url()}
-                            className="h-[250px] w-auto mb-10  "
+                            className="h-[300px] w-auto mt-40  "
                             alt=""
                         />
 
-                        <div className="space-y-10 px-0 md:px-10 max-w-6xl ">
-                            <h4 className="text-4xl font-semibold text-center">
-                                <span className="underline decoration-[#adb563] ">
+                        <div className="space-y-5 px-0 md:px-10 max-w-6xl  ">
+                            <h4 className="text-3xl font-semibold text-center">
+                                <span >
                                     case study {i + 1} of {projects.length} :
                                 </span>{" "}
                                 {project.title}
                             </h4>
 
-                            <div className="flex items-center space-x-2 justify-center">
+                            <div className="flex items-center space-x-1 justify-center ">
                                 {project.technologies.map((technology) => (
                                     <img
-                                        className="h-5 w-5"
+                                        className="h-7 w-7 rounded-full"
                                         key={technology._id}
                                         src={urlFor(technology.image).url()}
                                         alt=""

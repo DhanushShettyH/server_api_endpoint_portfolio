@@ -36,6 +36,7 @@ const Home = async () => {
   const { pageInfo, experiences, projects, skills, socials } = await fetchdata();
 
 
+ 
   return (
     <>
       {/* components are snapable  */}

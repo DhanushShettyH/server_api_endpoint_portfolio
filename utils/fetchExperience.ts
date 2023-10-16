@@ -3,7 +3,7 @@ import { Experience } from "../typings";
 
 export const  fetchExperience = async()=> {
     // here making call to backend
-    const res = await fetch(`/api/getExperience`);
+    const res = await fetch(`http://localhost:3000//api/getExperience`);
     const data = await res.json()
     // typing checking data
     const experiences: Experience[]= data.experiences;

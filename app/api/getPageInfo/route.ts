@@ -10,7 +10,7 @@ const query = groq`
 type Data = {
   pageInfo: PageInfo;
 };
-export async function GET({ }: Data) {
+export async function GET() {
   const pageInfo: PageInfo = await sanityClient.fetch(query);
 
   return NextResponse.json({ pageInfo });

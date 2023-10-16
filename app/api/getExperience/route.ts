@@ -22,8 +22,9 @@ type Data = {
 };
 
 // The function takes a single parameter, which is an object of type Data
-export async function GET({ }: Data) {
+export async function GET() {
   //you are fetching data and expecting the result to be an array of Experience objects. 
+
   const experiences: Experience[] = await sanityClient.fetch(query);  
 
   return NextResponse.json({ experiences });

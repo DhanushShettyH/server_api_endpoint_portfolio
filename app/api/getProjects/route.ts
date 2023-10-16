@@ -13,7 +13,7 @@ const query = groq`
 type Data = {
   projects: Project[];
 };
-export async function GET({ }: Data)  {
+export async function GET()  {
   const projects: Project[] = await sanityClient.fetch(query);
 
   return NextResponse.json({ projects });

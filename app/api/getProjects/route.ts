@@ -9,7 +9,7 @@ const query = groq`
   technologies[]->
 }
 `;
-
+// update project
 type Data = {
   projects: Project[];
 };

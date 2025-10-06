@@ -7,6 +7,7 @@ const Home =() => {
   return (
     <>
 	<h1>This is sever which only run api end poinsts for portfolio</h1>
+		<p>go some were else.....</p>
     </>
   );
 }
